@@ -1,11 +1,25 @@
 window.addEventListener("load", () => {
   // This is a check to see if there's a username stored
   let username = localStorage.getItem("username");
+  document.querySelector("#logout").addEventListener("click", function () { clearData() });
+
   if (!username) {
-    // Prompt for one if a username isn't found
+    /* Prompt for one if a username isn't found
+    ユーザー名が見つからない場合は入力を求めるプロンプトを表示する
+    */
     username = window.prompt("What is your name?");
-    localStorage.setItem("username", username);
+    localStorage.setItem("username", username);       //localStorageに"username"で保存
+    window.location.reload();
+
+  } else {
+    const localStorageElement = document.querySelector("#name");
+    localStorageElement.innerText = `( ${username} )`;
   }
+  // if (!username) {
+  //   // Prompt for one if a username isn't found
+  //   username = window.prompt("What is your name?");
+  //   localStorage.setItem("username", username);
+  // }
 
   const containerEl = document.querySelector("#newsfeed");
 
@@ -15,7 +29,7 @@ window.addEventListener("load", () => {
 
     // const cardEl = document.createElement("card");
     // cardEl.classname = "card"
-    
+
     // const friendEl=document.createTextNode(post.friend)
     // cardEl.appendChild(friendEl);
 
@@ -46,21 +60,21 @@ window.addEventListener("load", () => {
     let dateFrom = moment();
     let dateTime = 0;
     console.log(post.timestamp);
-    if(dateFrom.diff(dateTo) >= (24 * 60 * 60 * 1000)){
+    if (dateFrom.diff(dateTo) >= (24 * 60 * 60 * 1000)) {
       dateTime = `posted ${dateFrom.diff(dateTo, 'days')} days ago`;
-    }else if(dateFrom.diff(dateTo) >= (60 * 60 * 1000)){
+    } else if (dateFrom.diff(dateTo) >= (60 * 60 * 1000)) {
       dateTime = `posted ${dateFrom.diff(dateTo, 'hours')} hours ago`;
-    }else{
+    } else {
       dateTime = `posted ${dateFrom.diff(dateTo, 'minutes')} minutes ago`;
     }
-    
-    
+
+
 
 
     dateTimeEl.innerText = dateTime;
     dateTimeEl.classname = "card-datetime";
     feelingEl.append(dateTimeEl);
-    
+
     const imageEl = document.createElement("img");
     imageEl.src = post.image;
     imageEl.width = "500";
@@ -70,11 +84,11 @@ window.addEventListener("load", () => {
     const cardContainer = document.createElement("div")
     cardContainer.className = "cardContainer";
     // cardContainer.append(dateTimeEl);
-  
-    cardContainer.append(imageEl);  
+
+    cardContainer.append(imageEl);
     cardContainer.append(feelingEl);
 
-    containerEl.append(cardContainer);    
+    containerEl.append(cardContainer);
     // containerEl.append(dateTimeEl);
     // containerEl.append(imageEl);
     containerEl.append(blockEl);
@@ -86,16 +100,16 @@ window.addEventListener("load", () => {
 
   // // let dateTo = moment('2023-10-10 12:00:00');
   // // let dateFrom = moment();
-  
+
   // // ミリ秒を返します
   // dateFrom.diff(dateTo)  // 7884000000
   // dateFrom.diff(dateTo) / (24 * 60 * 60 * 1000)  // 91.25
-  
+
   // // 第2引数で単位を指定できます。
   // dateFrom.diff(dateTo, 'months')   // 3
   // dateFrom.diff(dateTo, 'days')     // 91
   // dateFrom.diff(dateTo, 'hours')    // 2190
-  
+
   // // 第3引数で小数の調整ができます。
   // dateFrom.diff(dateTo, 'days', true)  // 91.25
   // dateFrom.diff(dateTo, 'days', false) // 91
@@ -106,3 +120,10 @@ window.addEventListener("load", () => {
   // console.log(moment().startOf('hour').fromNow());
   // console.log(dateFrom.diff(dateTo, 'minutes'));
 });
+
+const clearData = () => {
+  localStorage.removeItem("username");
+  alert("ログアウトしました！！");
+  window.location.reload();
+  return;
+}
