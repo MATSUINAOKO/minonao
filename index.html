@@ -13,15 +13,19 @@
 
 </head>
 <header>
-  <h1>
+  <h1 class="logo">Bacefook Newsfeed</h1>
+  <a id="name"></a>
+  <input type="text" id="hashtag" name="hashtag" placeholder="ハッシュタグ" />
+  <input type="text" id="feeling" name="feeling" placeholder="今の気持ち" />
+  <input type="text" id="usertext" name="usertext" placeholder="一言" />
+  <button id="post-button">投稿する</button>
+  <!-- <h1>
     <a href="/">Bacefook Newsfeed</a>
-  </h1>
+  </h1> -->
   <nav class="pc-nav">
-    <p id="name"></p>
-    <button id="logout">ログアウト</button>
     <ul>
-      <!-- <link rel="icon" type="image/gif" href="/Users/user/Desktop/precourse.bacefook-dig/images/16_2_395.png"> -->
       <li><a class="refresh" href="#" onclick="window.location.reload();">Refresh</a></li>
+      <li><button id="logout">ログアウト</button></li>
       <!-- <li><a href="#">SERVICE</a></li>
           <li><a href="#">COMPANY</a></li>
           <li><a href="#">CONTACT</a></li> -->
@@ -34,7 +38,7 @@
     <div class="card">
       <div id="newsfeed"></div>
 
-      <form action="/my-handling-form-page" method="post">
+      <!-- <form id="fomat" action="/my-handling-form-page" method="post">
         <ul>
           <li>
             <label for="name">Name:</label>
@@ -50,7 +54,7 @@
           </li>
         </ul>
       </form>
-
+ -->
 
     </div>
   </div>
