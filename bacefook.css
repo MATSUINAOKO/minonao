@@ -1,147 +1,193 @@
 /* リセット用CSS(ブラウザ間の差をなくしつつ、paddingをシンプルに扱える) */
 * {
-    box-sizing: border-box;
- }
- 
- body {
-    margin: 0;
-    padding: 0;
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #e6e6e6;
- }
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #e6e6e6;
+}
 
 /*header*/
-header{
-    width:100%; /*横幅いっぱい*/
-    padding:30Px 4% 10px; /*余白指定*/
-    background-color: #4267b2; /*背景*/
-    display: flex; /*子の要素を横並び*/
-    align-items: center; /*子の要素が縦方向の中心*/
-    position: fixed; /*絶対位置*/
-    top: 0; /*画面上部に位置指定*/
+header {
+  width: 100%;
+  /*横幅いっぱい*/
+  padding: 30Px 4% 10px;
+  /*余白指定*/
+  background-color: #4267b2;
+  /*背景*/
+  display: flex;
+  /*子の要素を横並び*/
+  align-items: center;
+  /*子の要素が縦方向の中心*/
+  position: fixed;
+  /*絶対位置*/
+  top: 0;
+  /*画面上部に位置指定*/
 }
+
 /*h1*/
-h1{
-    margin: 0;
-    padding: 0;
-    font-size: 30px;
-}
+/* h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+} */
+
 /*a*/
-a{
-    text-decoration: none; /*下線無し*/
-    color: #fff;
-    font-family:Tahoma;
+h1 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  /*下線無し*/
+  color: #fff;
+  font-family: Tahoma;
 }
 
-ul{
-    list-style: none; /*下線無し*/
-    margin:0;
-    display: flex;  /*横並び*/
+ul {
+  list-style: none;
+  /*下線無し*/
+  margin: 0;
+  display: flex;
+  /*横並び*/
 }
 
-li{
-    margin: 0 0 0 15px;  /*余白調整*/
-    font-size: 14px;
+li {
+  margin: 0 0 0 15px;
+  /*余白調整*/
+  font-size: 14px;
 }
 
-nav{
-    margin: 0 0 0 auto;  /*外側の余白調整　左にautoすると右端まで押し出し*/
+nav {
+  margin: 0 0 0 auto;
+  /*外側の余白調整　左にautoすると右端まで押し出し*/
 }
 
-.refresh{
-    background-image: url("/Users/user/Desktop/precourse.bacefook-dig/images/16_2_395.png");
+.refresh {
+  background-image: url("/Users/user/Desktop/precourse.bacefook-dig/images/16_2_395.png");
 
 }
 
-.card{
-    padding: 100px 4% 30px; /*余白指定*/
-    width: 90%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #ccc;
+.card {
+  padding: 150px 4% 30px;
+  /*余白指定*/
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
 }
-.card-img{
-    border-radius: 5px 5px 5px 5px;
-    max-width:100%;
-    height:auto;
+
+.card-img {
+  border-radius: 5px 5px 5px 5px;
+  max-width: 100%;
+  height: auto;
 }
-.cardContainer{
-    display: flex;
-    max-width: 750px;
-    
+
+.cardContainer {
+  display: flex;
+  max-width: 750px;
+
 }
 
 form {
-    /* フォームをページのtopに配置 */
-    position: fixed; /*絶対位置*/
-    top: 100px; /*画面上部に位置指定*/
-    /* margin: 0 auto; */
-    width: 400px;
-    /* フォームの輪郭 */
-    
-    justify-content: flex-end;
-    padding-left: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em; /*境界の外側の角を丸める*/
-    
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0; /*余白設定*/
-    margin: 0; /*要素余白設定*/
-  }
-  
-  form li + li {
-    margin-top: 1em;
-  }
-  
-  label {
-    /* 大きさと配置を統一 */
-    display: inline-block;
-    width: 90px;
-    text-align: right;
-  }
-  
-  input,
-  textarea {
-    /* すべてのテキストフィールドのフォント設定を一致させる
+  /* フォームをページのtopに配置 */
+  position: fixed;
+  /*絶対位置*/
+  top: 100px;
+  /*画面上部に位置指定*/
+  /* margin: 0 auto; */
+  width: 400px;
+  /* フォームの輪郭 */
+
+  justify-content: flex-end;
+  padding-left: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  /*境界の外側の角を丸める*/
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  /*余白設定*/
+  margin: 0;
+  /*要素余白設定*/
+}
+
+form li+li {
+  margin-top: 1em;
+}
+
+label {
+  /* 大きさと配置を統一 */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* すべてのテキストフィールドのフォント設定を一致させる
        既定で、 textarea には等幅フォントが設定されている */
-    font: 1em sans-serif;
-  
-    /* テキストフィールドの大きさを統一 */
-    width: 300px;
-    box-sizing: border-box;
-  
-    /* フォームフィールド境界に合わせる */
-    /* border: 1px solid #999; */
-  }
-  
-  input:focus,
-  textarea:focus {
-    /* フォーカスのある要素を強調する */
-    border-color: #000;
-  }
-  
-  textarea {
-    /* 複数行のテキストフィールドをラベルに揃える */
-    vertical-align: top;
-  
-    /* テキスト入力に十分な空間を与える */
-    height: 5em;
-  }
-  
-  .button {
-    /* ボタンを他のテキストフィールドと同じ場所に置く */
-    padding-left: 90px; /* label 要素と同じサイズ */
-  }
-  
-  button {
-    /* このマージンは、ラベルとテキストフィールドの間のスペースと
+  font: 1em sans-serif;
+
+  /* テキストフィールドの大きさを統一 */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* フォームフィールド境界に合わせる */
+  /* border: 1px solid #999; */
+}
+
+input:focus,
+textarea:focus {
+  /* フォーカスのある要素を強調する */
+  border-color: #000;
+}
+
+textarea {
+  /* 複数行のテキストフィールドをラベルに揃える */
+  vertical-align: top;
+
+  /* テキスト入力に十分な空間を与える */
+  height: 5em;
+}
+
+.button {
+  /* ボタンを他のテキストフィールドと同じ場所に置く */
+  padding-left: 90px;
+  /* label 要素と同じサイズ */
+}
+
+button {
+  /* このマージンは、ラベルとテキストフィールドの間のスペースと
        おおよそ同じスペースを表す */
-    margin-left: 0.5em;
-  }
-  
+  margin-left: 0.5em;
+}
+
+#name {
+  position: relative;
+  display: flex;
+  height: 0pxpx;
+  width: 150px;
+}
+
+#hashtag {
+  height: 30px;
+  width: 150px;
+}
+
+#feeling {
+  height: 30px;
+  width: 150px;
+}
+
+#usertext {
+  height: 30px;
+  width: 150px;
+}
