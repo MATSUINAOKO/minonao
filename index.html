@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>DIG Bacefook Newsfeed</title>
+    <script src="dataGenerator.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="bacefook.css" />
+    <!-- FontAwesome Here! -->
+    <script
+      src="https://kit.fontawesome.com/272a1c6b44.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <title>DIG Bacefook Newsfeed</title>
-  <script src="dataGenerator.js"></script>
-  <script src="app.js"></script>
-  <link rel="stylesheet" href="bacefook.css">
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script> -->
-
-
-  <script src="./moment.js"></script>
-
-</head>
-<header>
-  <h1 class="logo">Bacefook Newsfeed</h1>
-  <a id="name"></a>
-  <input type="text" id="hashtag" name="hashtag" placeholder="ハッシュタグ" />
-  <input type="text" id="feeling" name="feeling" placeholder="今の気持ち" />
-  <input type="text" id="usertext" name="usertext" placeholder="一言" />
-  <button id="post-button">投稿する</button>
-  <!-- <h1>
+    <script src="./moment.js"></script>
+  </head>
+  <header>
+    <h1 class="logo">Bacefook Newsfeed</h1>
+    <a id="name"></a>
+    <input type="text" id="hashtag" name="hashtag" placeholder="ハッシュタグ" />
+    <input type="text" id="feeling" name="feeling" placeholder="今の気持ち" />
+    <input type="text" id="usertext" name="usertext" placeholder="一言" />
+    <button id="post-button">投稿する</button>
+    <!-- <h1>
     <a href="/">Bacefook Newsfeed</a>
   </h1> -->
-  <nav class="pc-nav">
-    <ul>
-      <li><a class="refresh" href="#" onclick="window.location.reload();">Refresh</a></li>
-      <li><button id="logout">ログアウト</button></li>
-      <!-- <li><a href="#">SERVICE</a></li>
+    <nav class="pc-nav">
+      <ul>
+        <li>
+          <a class="refresh" href="#" onclick="window.location.reload();"
+            >Refresh</a
+          >
+        </li>
+        <li><button id="logout">ログアウト</button></li>
+        <!-- <li><a href="#">SERVICE</a></li>
           <li><a href="#">COMPANY</a></li>
           <li><a href="#">CONTACT</a></li> -->
-    </ul>
-  </nav>
-</header>
+      </ul>
+    </nav>
+  </header>
 
-<body>
-  <div class="topPage">
-    <div class="card">
-      <div id="newsfeed"></div>
+  <body>
+    <div class="topPage">
+      <div class="card">
+        <div id="newsfeed"></div>
 
-      <!-- <form id="fomat" action="/my-handling-form-page" method="post">
+        <!-- <form id="fomat" action="/my-handling-form-page" method="post">
         <ul>
           <li>
             <label for="name">Name:</label>
@@ -55,9 +60,7 @@
         </ul>
       </form>
  -->
-
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
