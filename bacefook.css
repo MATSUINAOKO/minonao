@@ -70,11 +70,11 @@ nav {
 }
 
 .card {
-  padding: 150px 4% 30px;
+  padding: 100px 4% 30px;
   /*余白指定*/
   width: 90%;
   margin: auto;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   background-color: #fff;
   border-radius: 5px;
@@ -88,8 +88,19 @@ nav {
 }
 
 .cardContainer {
+  padding: 30px 4% 30px;
+  /*余白指定*/
+  width: 90%;
+  margin: auto;
   display: flex;
-  max-width: 750px;
+  gap: 6px 10px; /* 余白 */
+  /* align-items: center; */
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+
+  /* display: flex;
+  max-width: 750px; */
 }
 
 form {
@@ -307,3 +318,16 @@ ul.sns_demo li a:hover img.off {
 .fas_sns_circlecolor li:nth-child(6) a {
   background: #ff9900;
 } */
+
+#post-button:hover {
+  background-color: black;
+  color: #fff;
+}
+#refresh:hover {
+  background-color: black;
+  color: #fff;
+}
+#logout:hover {
+  background-color: black;
+  color: #fff;
+}

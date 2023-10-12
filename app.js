@@ -98,7 +98,8 @@ function newFeed(textEl) {
   imageEl.width = "500";
   imageEl.className = "card-img";
 
-  const blockEl = document.createElement("hr");
+  const blockEl = document.createElement("br");
+
   const cardContainer = document.createElement("div");
   cardContainer.className = "cardContainer";
   //////Facebookアイコン/
@@ -159,7 +160,6 @@ function newFeed(textEl) {
   cardContainer.append(imageEl);
   cardContainer.append(feelingEl);
   containerEl.append(cardContainer);
-
   containerEl.append(blockEl);
   return;
 }
