@@ -29,14 +29,6 @@ header {
   /*画面上部に位置指定*/
 }
 
-/*h1*/
-/* h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-} */
-
-/*a*/
 h1 {
   margin: 0;
   padding: 0;
@@ -44,29 +36,6 @@ h1 {
   /*下線無し*/
   color: #fff;
   font-family: Tahoma;
-}
-
-ul {
-  list-style: none;
-  /*下線無し*/
-  margin: 0;
-  display: flex;
-  /*横並び*/
-}
-
-li {
-  margin: 0 0 0 15px;
-  /*余白調整*/
-  font-size: 14px;
-}
-
-nav {
-  margin: 0 0 0 auto;
-  /*外側の余白調整　左にautoすると右端まで押し出し*/
-}
-
-.refresh {
-  background-image: url("/Users/user/Desktop/precourse.bacefook-dig/images/16_2_395.png");
 }
 
 .card {
@@ -201,76 +170,6 @@ button {
   width: 150px;
 }
 
-/*///////////////////////////*/
-.heart-container {
-  /* background-color: transparent;
-  border: none; */
-  /* border-radius: 20px;
-  /* box-shadow: 0 2px 8px rgba(0,0,0,.1); */
-  /* display: inline-block;*/
-  width: 140px;
-  height: 140px;
-  line-height: 45px;
-}
-.heart {
-  background-color: transparent;
-  text-align: left;
-  border: none;
-  font-size: 25px;
-  text-decoration: none;
-  color: black;
-}
-/* .heart:hover{
-  color: red;
-} */
-.heart {
-  color: yellow;
-}
-.heart:visited {
-  color: red;
-}
-/* .heart:checked+label{
-  background: red;
-  color: #FFF;
-} */
-
-/*/ ///////////////////////////////////////////*/
-ul.sns_demo {
-  margin: 0;
-  max-width: 500px;
-  font-size: 0;
-}
-ul.sns_demo li {
-  display: inline-block;
-  vertical-align: top;
-  width: calc(100% / 3);
-  margin: 0;
-}
-ul.sns_demo li a {
-  display: block;
-  max-width: 120px;
-  margin: 0 auto;
-  position: relative;
-}
-ul.sns_demo li img.off {
-  transition: 0.5s all;
-  position: relative;
-  z-index: 2;
-}
-ul.sns_demo li img.on {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-ul.sns_demo li a:hover img {
-  opacity: 1;
-}
-ul.sns_demo li a:hover img.off {
-  opacity: 0;
-}
-
-/*//////////*/
 .fas_sns_circlecolor {
   margin: 0;
   padding: 0;
@@ -309,15 +208,6 @@ ul.sns_demo li a:hover img.off {
 .fas_sns_circlecolor li:nth-child(3) a {
   background: #d93078;
 }
-/* .fas_sns_circlecolor li:nth-child(4) a {
-  background: #3399cc;
-}
-.fas_sns_circlecolor li:nth-child(5) a {
-  background: #ff0000;
-}
-.fas_sns_circlecolor li:nth-child(6) a {
-  background: #ff9900;
-} */
 
 #post-button:hover {
   background-color: black;
