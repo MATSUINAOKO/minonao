@@ -3,6 +3,7 @@ window.addEventListener("load", () => {
   // This is a check to see if there's a username stored
   let username = localStorage.getItem("username");
   document.querySelector("#logout").addEventListener("click", function () { clearData() });
+  document.querySelector("#refresh").addEventListener("click", function () { window.location.reload() });
   if (!username) {
     /* Prompt for one if a username isn't found
     ユーザー名が見つからない場合は入力を求めるプロンプトを表示する
