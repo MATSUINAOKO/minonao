@@ -143,19 +143,16 @@
   const generatePostObj = timeOffset => {
     // if an offset is provided, make the timestamp that much older, otherwise just use the current time
     const timestamp = timeOffset
-      ? new Date(new Date().getTime() - timeOffset)
-      : new Date();
-      // const now_jpn = moment();
-      ////////
-      // console.log(now_jpn);
-      console.log("timestamp",timestamp)
-      ///////
+      ? new Date(new Date().getTime() - timeOffset).getTime()
+      : new Date().getTime();
+
     return {
       friend: getRandomElement(bacefook.friendNames),
       text: generateRandomText(),
       feeling: getRandomElement(feelings),
       image: getRandomElement(images),
-      timestamp: timestamp
+      timestamp
+      //timestamp: timestamp
     };
   };
 
@@ -169,23 +166,21 @@
   const createPost = timeOffset => {
     const newPost = generatePostObj(timeOffset);
     addPost(newPost);
-    // window.addEventListener("load",null);
   };
 
   for (let i = 0; i < 10; i++) {
     // make the starting posts look like they were posted over the course of the past day
-    const timeOffset = (2 * (10 - i) + Math.random()) * 60 * 60 * 1000;
+    //const timeOffset = (2 * (10 - i) + Math.random()) * 60 * 60 * 1000;
+    const timeOffset = (2 * (10 - i) + Math.random()) * 60 * 1000;
+    //const timeOffset = 30 + Math.random() * 60 * 1000;
     createPost(timeOffset);
   }
 
   const scheduler = () => {
     createPost(null);
-    setTimeout(scheduler, (3 + Math.random() * 5) * 1000); // generate a new post every 3 to 8 seconds
+    //setTimeout(scheduler, (3 + Math.random() * 5) * 1000); // generate a new post every 3 to 8 seconds
   };
 
   scheduler();
-
-
-
 
 })();
