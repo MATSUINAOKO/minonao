@@ -151,6 +151,8 @@ button {
 #name {
   position: relative;
   display: flex;
+  color: #fff;
+  right: -50px;
   height: 0pxpx;
   width: 150px;
 }
