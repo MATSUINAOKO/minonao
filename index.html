@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>DIG Bacefook Newsfeed</title>
+    <script src="dataGenerator.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="bacefook.css" />
+    <!-- FontAwesome Here! -->
+    <script
+      src="https://kit.fontawesome.com/272a1c6b44.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <title>DIG Bacefook Newsfeed</title>
-  <script src="dataGenerator.js"></script>
-  <script src="app.js"></script>
-  <link rel="stylesheet" href="bacefook.css" />
-  <!-- FontAwesome Here! -->
-  <script src="https://kit.fontawesome.com/272a1c6b44.js" crossorigin="anonymous"></script>
+    <script src="./moment.js"></script>
+  </head>
 
-  <script src="./moment.js"></script>
-</head>
-<header>
-  <h1 class="logo">Bacefook Newsfeed</h1>
-  <a id="name"></a>
-  <input type="text" id="hashtag" name="hashtag" placeholder="ハッシュタグ" />
-  <select name="feel" id="feeling">
-    <option value="frustrared" selected>今どんな気持ち？</option>
-    <option value="happy">happy</option>
-    <option value="angry">angry</option>
-    <option value="excited">excited</option>
-    <option value="frustrared">frustrared</option>
-    <option value="gross">gross</option>
-    <option value="lovestruck">lovestruck</option>
-    <option value="scared">scared</option>
-    <option value="smug">smug</option>
-    <option value="tired">tired</option>
-  </select>
-  <input type="text" id="usertext" name="usertext" placeholder="一言" />
-  <button id="post-button">投稿する</button>
-  <button id="refresh">更新</button>
-  <button id="logout">ログアウト</button>
-</header>
+  <header>
+    <h1 class="logo">Bacefook Newsfeed</h1>
+    <article class="userName">
+      <a id="name"></a>
+    </article>
+    <article class="newPost">
+      <input
+        type="text"
+        id="hashtag"
+        name="hashtag"
+        placeholder="ハッシュタグ"
+      />
+      <select name="feel" id="feeling">
+        <option value="frustrared" selected>今どんな気持ち？</option>
+        <option value="happy">happy</option>
+        <option value="angry">angry</option>
+        <option value="excited">excited</option>
+        <option value="frustrared">frustrared</option>
+        <option value="gross">gross</option>
+        <option value="lovestruck">lovestruck</option>
+        <option value="scared">scared</option>
+        <option value="smug">smug</option>
+        <option value="tired">tired</option>
+      </select>
+      <input type="text" id="usertext" name="usertext" placeholder="一言" />
+      <button id="post-button">投稿</button>
+      <button id="refresh">更新</button>
+      <button id="logout">ログアウト</button>
+    </article>
+  </header>
 
-<body>
-  <div class="topPage">
-    <div class="card">
-      <div id="newsfeed"></div>
-    </div>
-  </div>
-</body>
-
+  <body>
+    <main class="topPage">
+      <article class="card">
+        <div id="newsfeed"></div>
+      </article>
+    </main>
+  </body>
 </html>
